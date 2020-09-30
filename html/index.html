@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type="text/javascript" src="../js/js.js"></script>
+</head>
+<body>
+<div align="center">
+    <h1>html</h1>
+    <button onclick="showObj.show()" class="jingtaizhuce">静态注册</button>
+    <button id="dongtaizhuce">动态注册</button>
+    <label for="shiqujiaodian"></label><input id="shiqujiaodian" value="失去焦点-请输入用户名">
+    <br>
+    <br>
+    <form action="http://localhost:8080/" method="get" onsubmit="" id="getInfo">
+        <input type="submit" value="点击注册">
+    </form>
+    <br>
+    <br>
+    输入信息校验：<input type="text" id="information" value="请输入信息"><button onclick="checkInfomation()">check</button>
+    <br>
+    <br>
+    用户名：<input type="text" id="username">
+    <button onclick="usernameCheck()">确定</button>
+    <span id="check"></span>
+    <br>
+    <br>
+    兴趣爱好：
+    <input type="checkbox" name="hobby" value="cpp">C++
+    <input type="checkbox" name="hobby" value="java">Java
+    <input type="checkbox" name="hobby" value="c">C
+    <input type="checkbox" name="hobby" value="python">Python
+    <br>
+    <button onclick="checkAll()">全选</button>
+    <button onclick="checkNo()">全不选</button>
+    <button onclick="checkReverse()">反选</button>
+</div>
+</body>
+</html>
