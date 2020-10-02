@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+        // js原生写法
+        // window.onload = function () {
+        //     const say = document.getElementById("sayHello");
+        //     say.onclick = function () {
+        //         alert("Hello JavaScript!");
+        //     }
+        // }
+
+        // jQuery
+        // alert($);
+        $(
+            // onload
+            function () {
+                // const say = document.getElementById("sayHello");
+                const $say = $("#sayHello");
+                $say.click(
+                    function () {
+                        alert("Hello JavaScript!");
+                    }
+                );
+            }
+        );
+    </script>
+</head>
+<body>
+<div align="center">
+    <h1>jQuery展示页面</h1>
+    <button class="jingtaizhuce" id="sayHello">say hello</button>
+</div>
+</body>
+</html>

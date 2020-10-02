@@ -36,6 +36,14 @@ window.onload = function () {
         // 加了下面这个return就会防止错误的信息被提交，让传参及时被阻止
         return false;
     }
+
+    const result = document.getElementById("result");
+    result.onblur = function (){
+        if(result.value < 2) {
+            alert("对不起，数量必须大于0。");
+            result.value = 1;
+        }
+    }
 }
 
 function checkInfomation() {
@@ -77,15 +85,20 @@ function usernameCheck() {
     }
 }
 
+
+
+function newTag() {
+    const divObj = document.createElement("div");
+    divObj.innerHTML = "一个Tag标签被创建了！";
+    document.sp = document.getElementById("nT");
+    document.sp.appendChild(divObj);
+}
+
 function checkAll() {
     const hobbies = document.getElementsByName("hobby");
     for(let i = 0; i < hobbies.length; i++) {
         hobbies[i].checked = true;
     }
-
-    const divObj = document.createElement("div");
-    divObj.innerHTML = "一个Tag标签被创建了！";
-    document.body.appendChild(divObj);
 }
 function checkNo() {
     const hobbies = document.getElementsByName("hobby");
@@ -99,4 +112,27 @@ function checkReverse() {
         // hobbies[i].checked = hobbies[i].checked !== true;
         hobbies[i].checked =! hobbies[i].checked;
     }
+}
+
+function jiaF() {
+    const jia = document.getElementById("jia");
+    const result = document.getElementById("result");
+
+    result.value++;
+}
+function jianF() {
+    const jian = document.getElementById("jian");
+    const result = document.getElementById("result");
+
+    if(result.value < 2) {
+        alert("对不起，数量必须大于0。");
+        result.value = 1;
+    }
+    else {
+        result.value--;
+    }
+}
+function showNumber() {
+    const result = document.getElementById("result");
+    alert("你选择购买了" + result.value + "件物品。");
 }
